@@ -3,39 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Anniversary</title>
+    <title>Our Anniversary Flipbook</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+
+<!-- Password Screen -->
+<div id="password-screen">
+    <h2>Enter Password to View</h2>
+    <input type="password" id="password-input" placeholder="Enter Password">
+    <button onclick="checkPassword()">Submit</button>
+    <p id="error-message"></p>
+</div>
+
+
+<!-- Flipbook Content (hidden by default) -->
+<div id="flipbook-content" style="display: none;">
     <header>
-        <h1>Happy Anniversary, [Her Name]!</h1>
-        <p>Celebrating one year of love and laughter</p>
+        <h1>Happy Anniversary, Adhya!</h1>
+        <p>Our journey, one page at a time ❤️</p>
     </header>
-    
-    <section id="our-story">
-        <h2>Our Story</h2>
-        <p>It all started on [Date you met]...</p>
-        <p>From our first date at [Place] to the moment we realized this was love...</p>
-    </section>
-    
-    <section id="gallery">
-        <h2>Our Memories</h2>
-        <div class="photo-grid">
-            <img src="photo1.jpg" alt="Memory 1">
-            <img src="photo2.jpg" alt="Memory 2">
-            <img src="photo3.jpg" alt="Memory 3">
-            <!-- Add more photos as needed -->
+
+
+    <section id="flipbook">
+        <div class="page active" id="page1">
+            <h2>Our First Date - Live Oak</h2>
+            <p>Live Oak! I still remember how nervous I was walking to Live Oak, so excited to finally see you but also nervous if we'd connect in person as we did texting. But from the very first moment I saw you I had to try my hardest to contain my smile because you were – and always will be – the prettiest girl I've ever seen. When we said bye, I had the biggest smile on my face and when I turned around to see you I wanted to just hug you and not let go.</p>
         </div>
+        <div class="page" id="page2">
+            <h2>Many Dates After ...</h2>
+            <p>I asked you to prom, and then, with my heart racing more than ever, gathered all my courage to ask you to be my girlfriend. I remember us standing under that streetlamp, and as I asked, I could barely contain the mix of excitement and nerves. Even though I hoped with all my heart you’d say yes, I still couldn’t believe it when you did. When we hugged for the longest time after, every bit of nervousness melted away, and I realized just how lucky I was. My crush since sophomore year was now my girlfriend!</p>
+        </div>
+        <div class="page" id="page3">
+            <h2>Old Ranch Park</h2>
+            <p>Our first date away from Live Oak, I was more excited than ever. I remember it was raining the morning that day, but the skies cleared up just in time, as if even the weather wanted everything to be perfect. We walked up the trail together, and when we sat on the bench, I asked if we could kiss. My heart was going crazy, and even though our first kiss was a little shy and awkward, it was perfect. And watching the beautiful sunset with a girl even more beautiful made me want to just stay in that moment– just you and me, forever.</p>
+        </div>
+        <div class="page" id="page4">
+            <h2>Prom</h2>
+            <p>Prom was amazing with you. When I saw you for the first time in your beautiful green dress, I wanted to hug you and kiss you and not let go. But spending time together was so incredible. Kissing you at the end made my heart flutter so much, and I just wanted everyone to know you’re mine. Being with you made everything perfect.</p>
+        </div>
+        <div class="page" id="page5">
+            <h2>Summer</h2>
+            <p>Our movies dates, where sitting on each other’s laps was goofy but so nice hehe. I loved laying my head on you, and truth be told I was much more focused on you than the movie ;)<br>Our LOT dates, where I loved walking along the beautiful lake with you and spending time with you. Being alone with you just makes me so happy, Adhya. And our tiktok – even though I hate dancing, making that video with you was one of the most fun things I’ve ever done. Looking back, every single thing we do is the most fun thing ever.<br>Our trail date, where we saw the breathtaking views from the very top. And seeing the kids play in the playground made me imagine when we’ll have kids of our own and sit watching them play.</p>
+        </div>
+        <div class="page" id="page6">
+            <h2>First Kiss kiss</h2>
+            <p>Oh my god, I still remember so clearly when we first kiss kissed. I was so nervous and I remember us trying to ask each other to do it first. But even though the first was awkward, I loved it more than anything. I love you more than anything.</p>
+        </div>
+        <div class="page" id="page7">
+            <h2>Hoco</h2>
+            <p>I loved being your date to hoco. I loved holding your hands and letting everyone know that you’re mine, and moshing with you. I loved laying on your shoulder at the end – I could have just fallen asleep in that moment next to you.</p>
+        </div>
+        <div class="page" id="page8">
+            <h2>The Future</h2>
+            <p>Looking back, I can’t tell you how much I appreciate you, Adhya. Thank you for coming into my life, for always being there and supporting me. Thank you for making me feel more loved than ever, listening to my rants, and helping me when it’s hard. I love everything about you, Adhya. You’re the most beautiful girl ever, and no matter how many “bruhs” you say, I hope you know it’s true. And I’m the luckiest boy ever to have you. Please know that I’ll always be here for you, no matter what. Whether we’re in college or anywhere, you’ll always have me to text, call, talk to, hug, and anything. I’m not going anywhere, and I promise you that with my whole heart. I can’t wait for our one year to turn into two, and then three, and before long, we’ll be wearing Indian dresses getting married to each other. And then having kids (and doggos!) and living every moment of life together. I can’t wait for our future ahead, and I’m confident it’ll be incredible with you. Happy anniversary, my love ❤️</p>
+        </div>
+        <div class="page" id="page9">
+            <h2>I love you</h2>
+            <p>More than anything my bhangaram ❤️</p>
+        </div>
+
+
     </section>
-    
-    <section id="messages">
-        <h2>Messages</h2>
-        <p><strong>My Message to You:</strong> [Your heartfelt message]</p>
-        <p>"[Favorite quote or lyric]"</p>
-    </section>
-    
+
+
+    <div id="controls">
+        <button onclick="previousPage()">Previous</button>
+        <button onclick="nextPage()">Next</button>
+    </div>
+
+
     <footer>
         <p>To many more years together ❤️</p>
     </footer>
+</div>
+
+
+<script src="script.js"></script>
 </body>
 </html>
+
+
+
+
